@@ -69,7 +69,7 @@ namespace Eco.Mods.TechTree
             this.ExperienceOnCraft = 1; // Defines how much experience is gained when crafted.
             
             // Defines the amount of labor required and the required skill to add labor
-            this.LaborInCalories = CreateLaborInCaloriesValue(1, typeof(SmeltingSkill));
+            this.LaborInCalories = CreateLaborInCaloriesValue(2000, typeof(SmeltingSkill));
 
             // Defines our crafting time for the recipe
             this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(MoreCopperBarRecipe), start: 0.1f, skillType: typeof(SmeltingSkill), typeof(SmeltingFocusedSpeedTalent), typeof(SmeltingParallelSpeedTalent));
