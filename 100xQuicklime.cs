@@ -44,8 +44,8 @@ namespace Eco.Mods.TechTree
         {
             var recipe = new Recipe();
             recipe.Init(
-                name: "100xQuicklime",  //noloc
-                displayName: Localizer.DoStr("100x Quicklime"),
+                name: "PurifiedQuicklime",  //noloc
+                displayName: Localizer.DoStr("Purified Quicklime"),
 
                 // Defines the ingredients needed to craft this recipe. An ingredient items takes the following inputs
                 // type of the item, the amount of the item, the skill required, and the talent used.
@@ -72,7 +72,7 @@ namespace Eco.Mods.TechTree
 
             // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "Quicklime"
             this.ModsPreInitialize();
-            this.Initialize(displayText: Localizer.DoStr("100x Quicklime"), recipeType: typeof(MoreQuicklimeRecipe));
+            this.Initialize(displayText: Localizer.DoStr("PurifiedQuicklime"), recipeType: typeof(MoreQuicklimeRecipe));
             this.ModsPostInitialize();
 
             // Register our RecipeFamily instance with the crafting system so it can be crafted.

@@ -41,15 +41,15 @@ namespace Eco.Mods.TechTree
     /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
     /// </remarks>
     [RequiresSkill(typeof(SmeltingSkill), 1)]
-    [Ecopedia("Blocks", "Metals", subPageName: "More Gold Bar Item")]
+    [Ecopedia("Blocks", "Metals", subPageName: "Purified Gold Bar Item")]
     public partial class MoreGoldBarRecipe : RecipeFamily
     {
         public MoreGoldBarRecipe()
         {
             var recipe = new Recipe();
             recipe.Init(
-                name: "400xGoldBar",  //noloc
-                displayName: Localizer.DoStr("400x Gold Bar"),
+                name: "PurifiedGoldBar",  //noloc
+                displayName: Localizer.DoStr("Purified Gold Bar"),
 
                 // Defines the ingredients needed to craft this recipe. An ingredient items takes the following inputs
                 // type of the item, the amount of the item, the skill required, and the talent used.
@@ -66,7 +66,7 @@ namespace Eco.Mods.TechTree
                     new CraftingElement<GoldBarItem>(400),
                 });
             this.Recipes = new List<Recipe> { recipe };
-            this.ExperienceOnCraft = 1; // Defines how much experience is gained when crafted.
+            this.ExperienceOnCraft = 1000; // Defines how much experience is gained when crafted.
             
             // Defines the amount of labor required and the required skill to add labor
             this.LaborInCalories = CreateLaborInCaloriesValue(2000, typeof(SmeltingSkill));
@@ -76,7 +76,7 @@ namespace Eco.Mods.TechTree
 
             // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "Iron Bar"
             this.ModsPreInitialize();
-            this.Initialize(displayText: Localizer.DoStr("400x Gold Bar"), recipeType: typeof(MoreGoldBarRecipe));
+            this.Initialize(displayText: Localizer.DoStr("Purified Gold Bar"), recipeType: typeof(MoreGoldBarRecipe));
             this.ModsPostInitialize();
 
             // Register our RecipeFamily instance with the crafting system so it can be crafted.

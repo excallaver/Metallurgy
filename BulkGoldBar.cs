@@ -43,8 +43,8 @@ namespace Eco.Mods.TechTree
 
 
     [Serialized]
-    [LocDisplayName("BulkGoldBar")]
-    [LocDescription("Bulk Refining of Gold")]
+    [LocDisplayName("PurifiedGoldBar")]
+    [LocDescription("Bulk Refining of Gold.  One purified bar equals 100 bars.")]
     [Weight(1000)]
     [Tag("Metal")]
     [MaxStackSize(50)]
@@ -54,7 +54,7 @@ namespace Eco.Mods.TechTree
 
 
     [RequiresSkill(typeof(MetallurgySkill), 2)]
-    [Ecopedia("Blocks", "Metals", subPageName: "Bulk Gold Bar Item")]
+    [Ecopedia("Blocks", "Metals", subPageName: "Purified Gold Bar Item")]
 
     public partial class BulkGoldBarRecipe : RecipeFamily
     {
@@ -62,8 +62,8 @@ namespace Eco.Mods.TechTree
         {
             var recipe = new Recipe();
             recipe.Init(
-                name: "100xBulkGoldBar",  //noloc
-                displayName: Localizer.DoStr("100x Bulk Gold Bar"),
+                name: "SmallPurifiedGoldBar",  //noloc
+                displayName: Localizer.DoStr("Small Purified Gold Bar"),
 
                 // Defines the ingredients needed to craft this recipe. An ingredient items takes the following inputs
                 // type of the item, the amount of the item, the skill required, and the talent used.
@@ -93,7 +93,7 @@ namespace Eco.Mods.TechTree
 
             // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "Iron Bar"
             this.ModsPreInitialize();
-            this.Initialize(displayText: Localizer.DoStr("100x Bulk Gold Bar"), recipeType: typeof(BulkGoldBarRecipe));
+            this.Initialize(displayText: Localizer.DoStr("Small Purified Gold Bar"), recipeType: typeof(BulkGoldBarRecipe));
             this.ModsPostInitialize();
 
             // Register our RecipeFamily instance with the crafting system so it can be crafted.

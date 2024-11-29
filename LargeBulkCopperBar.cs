@@ -43,7 +43,7 @@ namespace Eco.Mods.TechTree
 
 
     [RequiresSkill(typeof(MetallurgySkill), 6)]
-    [Ecopedia("Blocks", "Metals", subPageName: "Bulk Copper Bar Item")]
+    [Ecopedia("Blocks", "Metals", subPageName: "Purified Copper Bar Item")]
 
     public partial class LargeBulkCopperBarRecipe : RecipeFamily
     {
@@ -51,8 +51,8 @@ namespace Eco.Mods.TechTree
         {
             var recipe = new Recipe();
             recipe.Init(
-                name: "1000xBulkCopperBar",  //noloc
-                displayName: Localizer.DoStr("1000x Bulk Copper Bar"),
+                name: "LargePurifiedCopperBar",  //noloc
+                displayName: Localizer.DoStr("Large Purified Copper Bar"),
 
                 // Defines the ingredients needed to craft this recipe. An ingredient items takes the following inputs
                 // type of the item, the amount of the item, the skill required, and the talent used.
@@ -82,7 +82,7 @@ namespace Eco.Mods.TechTree
 
             // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "Iron Bar"
             this.ModsPreInitialize();
-            this.Initialize(displayText: Localizer.DoStr("1000x Bulk Copper Bar"), recipeType: typeof(LargeBulkCopperBarRecipe));
+            this.Initialize(displayText: Localizer.DoStr("Large Purified Copper Bar"), recipeType: typeof(LargeBulkCopperBarRecipe));
             this.ModsPostInitialize();
 
             // Register our RecipeFamily instance with the crafting system so it can be crafted.
