@@ -41,15 +41,15 @@ namespace Eco.Mods.TechTree
     /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
     /// </remarks>
     [RequiresSkill(typeof(AdvancedSmeltingSkill), 1)]
-    [Ecopedia("Blocks", "Metals", subPageName: "More Steel Bar Item")]
+    [Ecopedia("Blocks", "Metals", subPageName: "Purified Steel Bar Item")]
     public partial class MoreSteelBarRecipe : RecipeFamily
     {
         public MoreSteelBarRecipe()
         {
             var recipe = new Recipe();
             recipe.Init(
-                name: "400xSteelBar",  //noloc
-                displayName: Localizer.DoStr("400x Steel Bar"),
+                name: "PurifiedSteelBar",  //noloc
+                displayName: Localizer.DoStr("Purified Steel Bar"),
 
                 // Defines the ingredients needed to craft this recipe. An ingredient items takes the following inputs
                 // type of the item, the amount of the item, the skill required, and the talent used.
@@ -66,7 +66,7 @@ namespace Eco.Mods.TechTree
                     new CraftingElement<SteelBarItem>(400),
                 });
             this.Recipes = new List<Recipe> { recipe };
-            this.ExperienceOnCraft = 1; // Defines how much experience is gained when crafted.
+            this.ExperienceOnCraft = 1000; // Defines how much experience is gained when crafted.
             
             // Defines the amount of labor required and the required skill to add labor
             this.LaborInCalories = CreateLaborInCaloriesValue(2000, typeof(AdvancedSmeltingSkill));
@@ -76,7 +76,7 @@ namespace Eco.Mods.TechTree
 
             // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "Iron Bar"
             this.ModsPreInitialize();
-            this.Initialize(displayText: Localizer.DoStr("400x Steel Bar"), recipeType: typeof(MoreSteelBarRecipe));
+            this.Initialize(displayText: Localizer.DoStr("Purified Steel Bar"), recipeType: typeof(MoreSteelBarRecipe));
             this.ModsPostInitialize();
 
             // Register our RecipeFamily instance with the crafting system so it can be crafted.
