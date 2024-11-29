@@ -705,7 +705,7 @@ namespace Eco.Mods.TechTree
         {
             this.ModsPreInitialize();
             this.GetComponent<MinimapComponent>().SetCategory(Localizer.DoStr("Crafting"));
-            this.GetComponent<PowerConsumptionComponent>().Initialize(1500);
+            this.GetComponent<PowerConsumptionComponent>().Initialize(3000);
             this.GetComponent<PowerGridComponent>().Initialize(10, new ElectricPower());
             this.GetComponent<HousingComponent>().HomeValue = ArcFurnaceItem.homeValue;
             //this.GetComponent<LiquidProducerComponent>().Setup(typeof(SmogItem), 1, BlockOccupancyType.ChimneyOut);
@@ -747,7 +747,7 @@ namespace Eco.Mods.TechTree
             
         };
 
-        [NewTooltip(CacheAs.SubType, 7)] public static LocString PowerConsumptionTooltip() => Localizer.Do($"Consumes: {Text.Info(1500)}w of {new ElectricPower().Name} power.");
+        [NewTooltip(CacheAs.SubType, 7)] public static LocString PowerConsumptionTooltip() => Localizer.Do($"Consumes: {Text.Info(3000)}w of {new ElectricPower().Name} power.");
         [Serialized, SyncToView, NewTooltipChildren(CacheAs.Instance, flags: TTFlags.AllowNonControllerTypeForChildren)] public object PersistentData { get; set; }
     }
 
